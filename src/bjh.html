@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>百京话生成器</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script>
+      async function getResult()
+        {
+          const postData = {
+            finalType:'bjh',
+            initialSentence: $("#initialSentence").val()
+          };
+          const param = {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Headers': 'content-type, accept'
+            },
+            body: JSON.stringify(postData)
+          };
+          const iniResult = await fetch('http://47.98.147.207:6324/uselessBox/fyBuilder/transform', param);
+          const result = await iniResult.json();
+          document.getElementById("res").innerHTML= result.data;
+        }
+    </script>
+  </head>
+  <body>
+    <form>
+      请输入要转化的文本<br> <input type="text" name="initialSentence" id="initialSentence"><br>
+      <input type="button" value="转化" onclick="getResult()" id="input">
+    </form>
+    <p id="res"></p>
+  </body>
+</html>
