@@ -21,7 +21,10 @@ router.post('/transform', (req, res, next) => {
   }
   const fyTransForm = new FYTransForm(finalType);
   const finalSentence = fyTransForm.bjhTransform(initialSentence);
+  console.log(finalSentence);
   res.send(new UBResult(true, finalSentence));
+  console.log(req.rawHeaders[req.rawHeaders.indexOf('User-Agent') + 1]);
+  console.log(req.connection.remoteAddress);
   return next();
 });
 
