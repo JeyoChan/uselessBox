@@ -14,8 +14,10 @@ router.post('', (req, res, next) => {
   }
   const initialText = req.body.initialText;
   const initialType = req.body.initialType;
-  const targetType = req.body.targetType;
-  rec(initialText, initialType, targetType)
+  const middleType = req.body.middleType;
+  let times = parseInt(req.body.times) || 1;
+  times = times > 1 ? times : 1;
+  rec(initialText, initialType, middleType, times)
     .then((ret) => {
       res.send(new UBResult(true, ret));
       const logInfo = {
