@@ -7,7 +7,7 @@ async function rec (initialText, initialType, middleType, times) {
     const result1 = await translate(result0.text, { to: 'zh-cn' });
     text = result1.text;
   }
-  return result1.text;
+  return text;
 }
 
 module.exports = {
