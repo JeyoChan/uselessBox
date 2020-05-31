@@ -1,16 +1,15 @@
 const { Router } = require('restify-router');
 const fs = require('fs');
 
-const { existBody } = require('../util/paramValidator');
-const UBResult = require('../util/UBResult');
+const { existBody } = require('../utils/paramValidator');
+const UBResult = require('../utils/UBResult');
+const { UBLogger } = require('../utils/UBLogger');
 const { curType, FYTransForm } = require('../service/fyTransform');
 
 const router = new Router();
 
 router.post('/transform', (req, res, next) => {
   if (!existBody(req, ['finalType', 'initialSentence'])) {
-    console.log(req.body);
-    console.log(req.body.finalType, req.body.initialSentence);
     res.send(new UBResult(false, '入参缺失'));
     return next();
   }
@@ -21,10 +20,15 @@ router.post('/transform', (req, res, next) => {
   }
   const fyTransForm = new FYTransForm(finalType);
   const finalSentence = fyTransForm.bjhTransform(initialSentence);
-  console.log(finalSentence);
+  const logInfo = {
+    finalSentence,
+    userInfo: {
+      agent: req.rawHeaders[req.rawHeaders.indexOf('User-Agent') + 1],
+      ip: req.connection.remoteAddress
+    }
+  };
+  UBLogger.info(logInfo);
   res.send(new UBResult(true, finalSentence));
-  console.log(req.rawHeaders[req.rawHeaders.indexOf('User-Agent') + 1]);
-  console.log(req.connection.remoteAddress);
   return next();
 });
 

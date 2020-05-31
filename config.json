@@ -1,3 +1,23 @@
 {
-  "port": 6324
+  "port": 6324,
+  "LogConfig": {
+    "appenders": {
+      "infoLogs": {
+        "type": "dateFile",
+        "filename": "./logs/info/info",
+        "pattern": ".yyyy-MM-dd",
+        "alwaysIncludePattern": true
+      },
+      "errorLogs": {
+        "type": "dateFile",
+        "filename": "./logs/error/error",
+        "pattern": ".yyyy-MM-dd",
+        "alwaysIncludePatternL": true
+      }
+    },
+    "categories": {
+      "default": { "appenders": ["infoLogs"], "level": "INFO" },
+      "err": { "appenders": ["errorLogs"], "level": "ERROR" }
+    }
+  }
 }

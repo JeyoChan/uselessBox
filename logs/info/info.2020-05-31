@@ -1,0 +1,8 @@
+[2020-05-31T19:30:54.558] [INFO] default - {
+  ret: {
+    text: '安装软件包，然后在node_modules目录中找到两个文件夹google-translate-api和google-translate-token，并将index.js中的所有https://translate.google.com都替换为https：//translate.google .cn，您可以使用此Google翻译API而不用翻墙，它与cn网站是同一服务器。',
+    from: { language: [Object], text: [Object] },
+    raw: ''
+  },
+  userInfo: { agent: 'PostmanRuntime/7.25.0', ip: '::1' }
+}

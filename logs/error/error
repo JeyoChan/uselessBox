@@ -1,0 +1,54 @@
+[2020-05-31T19:16:52.785] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
+[2020-05-31T19:18:41.096] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
+[2020-05-31T19:19:45.200] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
+[2020-05-31T19:20:19.356] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
+[2020-05-31T19:24:16.036] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
+[2020-05-31T19:26:31.351] [ERROR] err - {
+  apiInfo: 'reconstruct err',
+  err: Error
+      at E:\Documents\code\my_code\node.js\uselessBox\node_modules\_google-translate-api@2.3.0@google-translate-api\index.js:105:17
+      at processTicksAndRejections (internal/process/task_queues.js:94:5)
+      at async rec (E:\Documents\code\my_code\node.js\uselessBox\service\rec.js:4:19) {
+    code: 'BAD_REQUEST'
+  }
+}
